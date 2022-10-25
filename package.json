@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "aws-sdk": "^2.1239.0",
     "command-line-args": "^5.2.1",
-    "npmlog": "^7.0.1"
+    "npmlog": "^7.0.1",
+    "yargs": "^17.6.0"
   }
 }

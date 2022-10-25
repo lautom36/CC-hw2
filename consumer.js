@@ -1,29 +1,17 @@
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
-const commandLineArgs = require('command-line-args');
+const yargs = require('yargs');
+// const Widget = require('Widget.js')
 
 // read from bucket 2 in key order
-const ReadBucketName = '';
-const WriteBucketName = '';
+const ReadBucketName = 'usu-cs5260-lautom-requests';
+const WriteBucketName = 'usu-cs5260-lautom-web';
 const WriteDynoDBName = '';
-let requests = null;
 
-readBucket = () => {
-  const parmas = {
-    Bucket: ReadBucketName,
-  }
+const argv = yargs.argv;
+const type = argv.type;
+let count = 0;
 
-  s3.listObjectsV2(params, function(err, data) {
-    if (err) {
-      // TODO: log error 
-    }
-    else {
-      // TODO: log data
-      // store data
-      requests = data;
-    }
-  })
-}
 
 // if bucket gets request, delete the request, process the request, wait 100ms and look for more requests
 
@@ -46,3 +34,114 @@ readBucket = () => {
 //  specified object does not exist.  If it does not currently exist, the Consumer should not 
 //  throw an error.  Instead, it should simply log a warning and move on to the next 
 //  request. 
+let result = null;
+let object = null;
+readBucket = async () => {
+  const params = {
+    Bucket: ReadBucketName,
+    MaxKeys: 1
+  }
+
+  await s3.listObjectsV2(params, function(err, data) {
+    if (err) {
+      console.log("error")
+      // TODO: log error 
+    }
+    else {
+      // console.log("No Error")
+      // TODO: log data
+      // store data
+      // console.log(data);
+      result = data;
+    }
+  }).promise();
+}
+
+poll = async () => {
+  while (count < 1) {
+    await readBucket();
+    const request = result;
+
+    if (request !== null) {
+      processRequest(request)
+    }
+    else {
+      setTimeout(timeout, 100);
+    }
+    count++;
+  }
+
+}
+
+timeout = () => {
+  console.log('no request found. waiting for 100ms');
+}
+
+processRequest = async (request) => {
+  const { Contents } = request;
+  const key = Contents[0].Key;
+  params = { Bucket: ReadBucketName, Key: key }
+  await getObjectFromS3(params);
+  console.log(object);
+
+  //TODO: delete request
+
+  // handle request
+  const { type } = object;
+  const widget = new Widget(object);
+  if (type === 'create') {
+    handleCreate(widget)
+  } else if (type === 'update') {
+    handleUpdate(widget)
+  } else if (type === 'delete') {
+    handleDelete(widget)
+  }
+
+  // preform action
+
+}
+
+getObjectFromS3 = async (params) => {
+  await s3.getObject(params, (err, data) => {
+    if (err) {
+      //TODO: error
+    } else {
+      let preJson = data.Body.toString();
+      object = JSON.parse(preJson);
+    }
+  }).promise();
+}
+
+handleCreate = (widget) => {
+
+}
+
+handleDelete = (widget) => {
+
+}
+
+handleUpdate = (widget) => {
+
+}
+
+class Widget {
+  Widget = {
+    id,
+    owner,
+    label,
+    description,
+    otherAttribute
+  }
+  createWidgetFromRequest = (request) => {
+    this.id = request.widgetId;
+    this.owner = request.owner;
+    this.label = request.label;
+    this.description = request.discription;
+    this.otherAttribute = request.otherAttribute;
+
+  }
+
+}
+
+
+poll()

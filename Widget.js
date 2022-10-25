@@ -3,13 +3,15 @@ class Widget {
     id,
     owner,
     label,
-    description
+    description,
+    otherAttribute
   }
   createWidgetFromRequest = (request) => {
-    this.id = request.getWidgetId();
-    this.owner = request.getOwner();
-    this.label = request.getLabel();
-    this.description = request.getDiscription();
+    this.id = request.widgetId;
+    this.owner = request.owner;
+    this.label = request.label;
+    this.description = request.discription;
+    this.otherAttribute = request.otherAttribute;
 
   }
 
@@ -21,8 +23,6 @@ class Request {
     requestId,
     widgetId,
     owner,
-    label,
-    description
   }
 
   getRequestId = () => {
@@ -49,6 +49,16 @@ class Request {
     this.owner = newOwner;
   }
 
+  toJson = () => {
+    return this.toJson();
+  }
+
+  fromJson = (json) => {
+
+  }
+}
+
+class CreateRequest extends Request {
   getLabel = () => {
     return this.label;
   }
@@ -64,13 +74,23 @@ class Request {
   setDiscription = (newDescription) => {
     this.description = newDescription;
   }
+}
 
-  toJson = () => {
-    return this.toJson();
+class UpdateRequest extends Request {
+  getLabel = () => {
+    return this.label;
   }
 
-  fromJson = (json) => {
+  setLabel = (newLabel) => {
+    this.label = newLabel;
+  }
 
+  getDiscription = () => {
+    return this.description;
+  }
+
+  setDiscription = (newDescription) => {
+    this.description = newDescription;
   }
 }
 
