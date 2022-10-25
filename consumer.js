@@ -124,7 +124,7 @@ getObjectFromS3 = async (params) => {
 
 handleCreate = async (widget) => {
   console.log("handleCreate started");
-  console.log(widget);
+  // console.log(widget);
   actionType = 's3'
   if (actionType === 's3') {
     const params = {Bucket: WriteBucketName, Body: JSON.stringify(widget), Key: `widget/${widget.owner}/${widget.id}`}
@@ -138,15 +138,35 @@ handleCreate = async (widget) => {
   }
 }
 
-handleDelete = (widget) => {
-
+handleDelete = async (widget) => {
 }
 
-handleUpdate = (widget) => {
+handleUpdate = async (widget) => {
+  console.log("handleUpdate started");
   // get og widget
+  params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` }
+  await getObjectFromS3(params);
+
+  const ogWidget = {
+    id: object.widgetId,
+    owner: object.owner,
+    label: object.label,
+    description: object.description,
+    otherAttributes: object.otherAttributes,
+  };
+
   // update widget
+  let updatedWidget = ogWidget;
+  for (key in widget) {
+    if (widget[key] !== undefined) {
+      updatedWidget[key] = widget[key];
+    }
+  }
+
   // put updated widget
+  handleCreate(updatedWidget);
 }
+
 
 
 poll()
