@@ -1,7 +1,29 @@
 const AWS = require('aws-sdk');
-const commandLineArgs = require('command-line-args')
+const s3 = new AWS.S3();
+const commandLineArgs = require('command-line-args');
 
 // read from bucket 2 in key order
+const ReadBucketName = '';
+const WriteBucketName = '';
+const WriteDynoDBName = '';
+let requests = null;
+
+readBucket = () => {
+  const parmas = {
+    Bucket: ReadBucketName,
+  }
+
+  s3.listObjectsV2(params, function(err, data) {
+    if (err) {
+      // TODO: log error 
+    }
+    else {
+      // TODO: log data
+      // store data
+      requests = data;
+    }
+  })
+}
 
 // if bucket gets request, delete the request, process the request, wait 100ms and look for more requests
 
