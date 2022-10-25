@@ -125,13 +125,24 @@ getObjectFromS3 = async (params) => {
   }).promise();
 }
 
+getObjectFromDdb = async (params) => {
+  console.log("getObjectFromDdb started");
+  await ddb.getItem(params, (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(data);
+    }
+  }).promise();
+}
+
 handleCreate = async (widget) => {
   console.log("handleCreate started");
   // console.log(widget);
   actionType = 'ddb'
   if (actionType === 's3') {
     const params = {Bucket: WriteBucketName, Body: JSON.stringify(widget), Key: `widget/${widget.owner}/${widget.id}`}
-    await s3.putObject(params, function(err, data) {
+    await s3.putObject(params, (err, data) => {
       if (err) {
         console.log(err);
       } else {
@@ -156,36 +167,72 @@ handleCreate = async (widget) => {
 handleDelete = async (widget) => {
   console.log("handleDelete started");
   // check if object exists
-  const params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` };
-  await getObjectFromS3(params);
 
-  if (object === null) {
-    console.log('object dosent exist');
-    return;
-  }
-
-  // delete object
-  await s3.deleteObject(params, function(err, data) {
-    if (err) {
-      console.log(err)
+  if (actionType === 's3') {
+    const params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` };
+    await getObjectFromS3(params);
+  
+    if (object === null) {
+      console.log('object dosent exist');
+      return;
     }
-  }).promise();
+  
+    // delete object
+    await s3.deleteObject(params, (err, data) => {
+      if (err) {
+        console.log(err)
+      }
+    }).promise();
+
+  } else if (actionType === 'ddb') {
+    const params = { 
+      TableName: WriteDynoDBName, 
+      Key: {
+         "id": {"S": `${widget.id}`},
+         "owner": {"S": `${widget.owner}`}
+        }};
+    await getObjectFromDdb(params);
+
+    if (object === null) {
+      console.log('object does not exist');
+      return;
+    }
+
+    await ddb.deleteItem(params, (err, data) => {
+      if (err) {
+        console.log(err);
+      }
+    }).promise();
+  }
 }
 
 handleUpdate = async (widget) => {
   console.log("handleUpdate started");
   // get og widget
-  params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` };
-  await getObjectFromS3(params);
-
-  const ogWidget = {
-    id: object.widgetId,
-    owner: object.owner,
-    label: object.label,
-    description: object.description,
-    otherAttributes: object.otherAttributes,
-  };
-
+  if (actionType === 's3') {
+    params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` };
+    await getObjectFromS3(params);
+  
+  } else if (actionType === 'ddb') {
+    const params = { 
+      TableName: WriteDynoDBName, 
+      Key: {
+        "id": {"S": `${widget.id}`},
+        "owner": {"S": `${widget.owner}`}
+      }};
+      await getObjectFromDdb(params);
+    }
+    console.log('loging object')
+    console.log(object);
+    console.log('done logging')
+    
+    const ogWidget = {
+      id: object.widgetId,
+      owner: object.owner,
+      label: object.label,
+      description: object.description,
+      otherAttributes: object.otherAttributes,
+    };
   // update widget
   let updatedWidget = ogWidget;
   for (key in widget) {
