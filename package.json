@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "command-line-args": "^5.2.1"
+    "command-line-args": "^5.2.1",
+    "npmlog": "^7.0.1"
   }
 }
