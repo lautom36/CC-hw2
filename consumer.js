@@ -127,7 +127,7 @@ handleCreate = async (widget) => {
   console.log(widget);
   actionType = 's3'
   if (actionType === 's3') {
-    const params = {Bucket: WriteBucketName, Body: JSON.stringify(widget), Key: `widget/${widget.id}`}
+    const params = {Bucket: WriteBucketName, Body: JSON.stringify(widget), Key: `widget/${widget.owner}/${widget.id}`}
     await s3.putObject(params, function(err, data) {
       if (err) {
         console.log(err);
@@ -143,7 +143,9 @@ handleDelete = (widget) => {
 }
 
 handleUpdate = (widget) => {
-
+  // get og widget
+  // update widget
+  // put updated widget
 }
 
 
