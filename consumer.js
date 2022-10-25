@@ -139,6 +139,7 @@ handleCreate = async (widget) => {
 }
 
 handleDelete = async (widget) => {
+  console.log("handleDelete started");
   // check if object exists
   const params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` };
   await getObjectFromS3(params);
