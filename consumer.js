@@ -1,8 +1,8 @@
 const AWS = require('aws-sdk');
+AWS.config.update({region: 'us-east-1'});
 const s3 = new AWS.S3();
 const ddb = new AWS.DynamoDB();
 const yargs = require('yargs');
-AWS.config.update({region: 'us-east-1'});
 // const Widget = require('Widget.js')
 
 // read from bucket 2 in key order
@@ -14,6 +14,9 @@ const validActionTypes = ['s3', 'sbb'];
 const argv = yargs.argv;
 let actionType = argv.type;
 let count = 0;
+
+// TODO: change this
+actionType = 'ddb'
 
 
 // if bucket gets request, delete the request, process the request, wait 100ms and look for more requests
@@ -82,6 +85,7 @@ timeout = () => {
 
 processRequest = async (request) => {
   console.log("processRequest started")
+  // get request from bucket 2
   const { Contents } = request;
   const key = Contents[0].Key;
   params = { Bucket: ReadBucketName, Key: key }
@@ -115,6 +119,7 @@ processRequest = async (request) => {
 }
 
 getObjectFromS3 = async (params) => {
+  console.log('getObjectFromS3 started')
   await s3.getObject(params, (err, data) => {
     if (err) {
       //TODO: error
@@ -139,7 +144,6 @@ getObjectFromDdb = async (params) => {
 handleCreate = async (widget) => {
   console.log("handleCreate started");
   // console.log(widget);
-  actionType = 'ddb'
   if (actionType === 's3') {
     const params = {Bucket: WriteBucketName, Body: JSON.stringify(widget), Key: `widget/${widget.owner}/${widget.id}`}
     await s3.putObject(params, (err, data) => {
@@ -189,7 +193,6 @@ handleDelete = async (widget) => {
       TableName: WriteDynoDBName, 
       Key: {
          "id": {"S": `${widget.id}`},
-         "owner": {"S": `${widget.owner}`}
         }};
     await getObjectFromDdb(params);
 
@@ -201,6 +204,8 @@ handleDelete = async (widget) => {
     await ddb.deleteItem(params, (err, data) => {
       if (err) {
         console.log(err);
+      } else {
+        console.log(data);
       }
     }).promise();
   }
@@ -222,9 +227,6 @@ handleUpdate = async (widget) => {
       }};
       await getObjectFromDdb(params);
     }
-    console.log('loging object')
-    console.log(object);
-    console.log('done logging')
     
     const ogWidget = {
       id: object.widgetId,
