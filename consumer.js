@@ -1,13 +1,16 @@
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
+const ddb = new AWS.DynamoDB();
 const yargs = require('yargs');
+AWS.config.update({region: 'us-east-1'});
 // const Widget = require('Widget.js')
 
 // read from bucket 2 in key order
 const ReadBucketName = 'usu-cs5260-lautom-requests';
 const WriteBucketName = 'usu-cs5260-lautom-web';
-const WriteDynoDBName = '';
+const WriteDynoDBName = 'widgets';
 
+const validActionTypes = ['s3', 'sbb'];
 const argv = yargs.argv;
 let actionType = argv.type;
 let count = 0;
@@ -125,7 +128,7 @@ getObjectFromS3 = async (params) => {
 handleCreate = async (widget) => {
   console.log("handleCreate started");
   // console.log(widget);
-  actionType = 's3'
+  actionType = 'ddb'
   if (actionType === 's3') {
     const params = {Bucket: WriteBucketName, Body: JSON.stringify(widget), Key: `widget/${widget.owner}/${widget.id}`}
     await s3.putObject(params, function(err, data) {
@@ -133,6 +136,18 @@ handleCreate = async (widget) => {
         console.log(err);
       } else {
         console.log("no error", data)
+      }
+    }).promise();
+
+  } else if (actionType === 'ddb') {
+    console.log(widget);
+    const ddbDc = new AWS.DynamoDB.DocumentClient();
+    const params = { TableName: WriteDynoDBName, Item: widget };
+    await ddbDc.put(params, function(err, data) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('uploaded');
       }
     }).promise();
   }
