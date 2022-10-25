@@ -9,7 +9,7 @@ const WriteBucketName = 'usu-cs5260-lautom-web';
 const WriteDynoDBName = '';
 
 const argv = yargs.argv;
-const type = argv.type;
+let actionType = argv.type;
 let count = 0;
 
 
@@ -78,23 +78,33 @@ timeout = () => {
 }
 
 processRequest = async (request) => {
+  console.log("processRequest started")
   const { Contents } = request;
   const key = Contents[0].Key;
   params = { Bucket: ReadBucketName, Key: key }
   await getObjectFromS3(params);
-  console.log(object);
+  // console.log(object);
 
   //TODO: delete request
 
   // handle request
   const { type } = object;
-  const widget = new Widget(object);
+  // console.log(object);
+  const widget = {
+    id: object.widgetId,
+    owner: object.owner,
+    label: object.label,
+    description: object.description,
+    otherAttributes: object.otherAttributes,
+  };
+  
+  // console.log(widget);
   if (type === 'create') {
-    handleCreate(widget)
+    handleCreate(widget);
   } else if (type === 'update') {
-    handleUpdate(widget)
+    handleUpdate(widget);
   } else if (type === 'delete') {
-    handleDelete(widget)
+    handleDelete(widget);
   }
 
   // preform action
@@ -112,8 +122,20 @@ getObjectFromS3 = async (params) => {
   }).promise();
 }
 
-handleCreate = (widget) => {
-
+handleCreate = async (widget) => {
+  console.log("handleCreate started");
+  console.log(widget);
+  actionType = 's3'
+  if (actionType === 's3') {
+    const params = {Bucket: WriteBucketName, Body: JSON.stringify(widget), Key: `widget/${widget.id}`}
+    await s3.putObject(params, function(err, data) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("no error", data)
+      }
+    }).promise();
+  }
 }
 
 handleDelete = (widget) => {
@@ -121,25 +143,6 @@ handleDelete = (widget) => {
 }
 
 handleUpdate = (widget) => {
-
-}
-
-class Widget {
-  Widget = {
-    id,
-    owner,
-    label,
-    description,
-    otherAttribute
-  }
-  createWidgetFromRequest = (request) => {
-    this.id = request.widgetId;
-    this.owner = request.owner;
-    this.label = request.label;
-    this.description = request.discription;
-    this.otherAttribute = request.otherAttribute;
-
-  }
 
 }
 
