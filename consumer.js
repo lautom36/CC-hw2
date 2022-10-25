@@ -139,12 +139,27 @@ handleCreate = async (widget) => {
 }
 
 handleDelete = async (widget) => {
+  // check if object exists
+  const params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` };
+  await getObjectFromS3(params);
+
+  if (object === null) {
+    console.log('object dosent exist');
+    return;
+  }
+
+  // delete object
+  await s3.deleteObject(params, function(err, data) {
+    if (err) {
+      console.log(err)
+    }
+  }).promise();
 }
 
 handleUpdate = async (widget) => {
   console.log("handleUpdate started");
   // get og widget
-  params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` }
+  params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` };
   await getObjectFromS3(params);
 
   const ogWidget = {
