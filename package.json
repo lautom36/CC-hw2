@@ -4,5 +4,26 @@
     "aws-sdk": "^2.1239.0",
     "winston": "^3.8.2",
     "yargs": "^17.6.0"
-  }
+  },
+  "name": "hw2",
+  "description": "",
+  "version": "1.0.0",
+  "main": "consumer.js",
+  "devDependencies": {
+    "jest": "^29.2.2"    
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lautom36/CC-hw2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lautom36/CC-hw2/issues"
+  },
+  "homepage": "https://github.com/lautom36/CC-hw2#readme"
 }

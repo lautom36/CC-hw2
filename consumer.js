@@ -22,10 +22,10 @@ let result = null;
 let object = null;
 
 // get first key in ReadBucket
-readBucket = async () => {
+readBucket = async (numberKeys=1) => {
   const params = {
     Bucket: ReadBucketName,
-    MaxKeys: 1
+    MaxKeys: numberKeys
   }
 
   await s3.listObjectsV2(params, function(err, data) {
@@ -56,6 +56,16 @@ poll = async () => {
   }
 }
 
+jsonToWidget = (json) => {
+  return {
+    id: json.widgetId,
+    owner: json.owner,
+    label: json.label,
+    description: json.description,
+    otherAttributes: json.otherAttributes,
+  };
+}
+
 
 processRequest = async (request) => {
   // console.log("processRequest started")
@@ -70,13 +80,7 @@ processRequest = async (request) => {
 
   // turn request into widget
   const { type } = object;
-  const widget = {
-    id: object.widgetId,
-    owner: object.owner,
-    label: object.label,
-    description: object.description,
-    otherAttributes: object.otherAttributes,
-  };
+  const widget = jsonToWidget(object);
   
   // handle request
   if (type === 'create') {
@@ -231,3 +235,6 @@ handleUpdate = async (widget) => {
 
 
 poll()
+
+
+module.exports = handleCreate, handleDelete, handleUpdate, jsonToWidget, readBucket;
