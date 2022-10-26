@@ -22,99 +22,99 @@ let result = null;
 let object = null;
 
 // get first key in ReadBucket
-readBucket = async (numberKeys=1) => {
-  const params = {
-    Bucket: ReadBucketName,
-    MaxKeys: numberKeys
-  }
+// readBucket = async (numberKeys=1) => {
+//   const params = {
+//     Bucket: ReadBucketName,
+//     MaxKeys: numberKeys
+//   }
 
-  await s3.listObjectsV2(params, function(err, data) {
-    if (err) {
-      logger.error(`There was an error reading from the ${ReadBucketName} bucket`);
-    }
-    else {
-      logger.info(`Request was loaded from bucket ${ReadBucketName}`)
-      result = data;
-    }
-  }).promise();
-}
+//   await s3.listObjectsV2(params, function(err, data) {
+//     if (err) {
+//       logger.error(`There was an error reading from the ${ReadBucketName} bucket`);
+//     }
+//     else {
+//       logger.info(`Request was loaded from bucket ${ReadBucketName}`)
+//       result = data;
+//     }
+//   }).promise();
+// }
 
 // untill interupted look for requests
-poll = async () => {
-  logger.info("\nConsumer started\n");
-  while (count < 1) {
-    await readBucket();
-    const request = result;
+// poll = async () => {
+//   logger.info("\nConsumer started\n");
+//   while (count < 1) {
+//     await readBucket();
+//     const request = result;
 
-    if (request !== null) {
-      processRequest(request)
-    }
-    else {
-      setTimeout(() => { logger.info('No request found. waiting for 100ms'); }, 100);
-    }
-    count++;
-  }
-}
+//     if (request !== null) {
+//       processRequest(request)
+//     }
+//     else {
+//       setTimeout(() => { logger.info('No request found. waiting for 100ms'); }, 100);
+//     }
+//     count++;
+//   }
+// }
 
-jsonToWidget = (json) => {
-  return {
-    id: json.widgetId,
-    owner: json.owner,
-    label: json.label,
-    description: json.description,
-    otherAttributes: json.otherAttributes,
-  };
-}
+// jsonToWidget = (json) => {
+//   return {
+//     id: json.widgetId,
+//     owner: json.owner,
+//     label: json.label,
+//     description: json.description,
+//     otherAttributes: json.otherAttributes,
+//   };
+// }
 
 
-processRequest = async (request) => {
-  // console.log("processRequest started")
+// processRequest = async (request) => {
+//   // console.log("processRequest started")
 
-  // get request from bucket 2
-  const { Contents } = request;
-  const key = Contents[0].Key;
-  params = { Bucket: ReadBucketName, Key: key }
-  await getObjectFromS3(params);
+//   // get request from bucket 2
+//   const { Contents } = request;
+//   const key = Contents[0].Key;
+//   params = { Bucket: ReadBucketName, Key: key }
+//   await getObjectFromS3(params);
 
-  //TODO: delete request
+//   //TODO: delete request
 
-  // turn request into widget
-  const { type } = object;
-  const widget = jsonToWidget(object);
+//   // turn request into widget
+//   const { type } = object;
+//   const widget = jsonToWidget(object);
   
-  // handle request
-  if (type === 'create') {
-    handleCreate(widget);
-  } else if (type === 'update') {
-    handleUpdate(widget);
-  } else if (type === 'delete') {
-    handleDelete(widget);
-  }
-}
+//   // handle request
+//   if (type === 'create') {
+//     handleCreate(widget);
+//   } else if (type === 'update') {
+//     handleUpdate(widget);
+//   } else if (type === 'delete') {
+//     handleDelete(widget);
+//   }
+// }
 
-getObjectFromS3 = async (params) => {
-  // console.log('getObjectFromS3 started')
-  await s3.getObject(params, (err, data) => {
-    if (err) {
-      logger.error(`There was an error getting key: ${params.Key} from Bucket: ${params.Bucket}`);
-    } else {
-      logger.info(`key: ${params.Key} was retrived from Bucket: ${params.Bucket}`);
-      let preJson = data.Body.toString();
-      object = JSON.parse(preJson);
-    }
-  }).promise();
-}
+// getObjectFromS3 = async (params) => {
+//   // console.log('getObjectFromS3 started')
+//   await s3.getObject(params, (err, data) => {
+//     if (err) {
+//       logger.error(`There was an error getting key: ${params.Key} from Bucket: ${params.Bucket}`);
+//     } else {
+//       logger.info(`key: ${params.Key} was retrived from Bucket: ${params.Bucket}`);
+//       let preJson = data.Body.toString();
+//       object = JSON.parse(preJson);
+//     }
+//   }).promise();
+// }
 
-getObjectFromDdb = async (params) => {
-  // console.log("getObjectFromDdb started");
-  await ddb.getItem(params, (err, data) => {
-    if (err) {
-      logger.error(`There was an error getting the item from Table: ${params.TableName}`);
-    } else {
-      logger.info(`item was retrived from Table: ${params.TableName}`);
-    }
-  }).promise();
-}
+// getObjectFromDdb = async (params) => {
+//   // console.log("getObjectFromDdb started");
+//   await ddb.getItem(params, (err, data) => {
+//     if (err) {
+//       logger.error(`There was an error getting the item from Table: ${params.TableName}`);
+//     } else {
+//       logger.info(`item was retrived from Table: ${params.TableName}`);
+//     }
+//   }).promise();
+// }
 
 handleCreate = async (widget) => {
   logger.info("handleCreate started");
