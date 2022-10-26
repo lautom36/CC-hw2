@@ -15,7 +15,7 @@ const consumerLogger = () => {
     ),
     transports: [
       new transports.File({ filename: 'consumer.log' }),
-      new transports.Console()
+      // new transports.Console()
     ]
   });
 }

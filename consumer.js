@@ -10,7 +10,6 @@ const ReadBucketName = 'usu-cs5260-lautom-requests';
 const WriteBucketName = 'usu-cs5260-lautom-web';
 const WriteDynoDBName = 'widgets';
 
-const validActionTypes = ['s3', 'sbb'];
 const argv = yargs.argv;
 let actionType = argv.type;
 let count = 0;
@@ -35,22 +34,31 @@ readBucket = async (numberKeys=1) => {
     else {
       logger.info(`Request was loaded from bucket ${ReadBucketName}`)
       result = data;
+      // return data;
     }
   }).promise();
 }
 
 // untill interupted look for requests
+let processing = false;
 poll = async () => {
   logger.info("\nConsumer started\n");
-  while (count < 1) {
-    await readBucket();
-    const request = result;
+  while (count < 100) {
+    if (!processing){
+      processing = true;
+      await readBucket();
+      let request = result;
 
-    if (request !== null) {
-      processRequest(request)
-    }
-    else {
-      setTimeout(() => { logger.info('No request found. waiting for 100ms'); }, 100);
+      if (request.KeyCount === 0) {
+        request = null;
+      }
+  
+      if (request !== null) {
+        processRequest(request)
+      }
+      else {
+        setTimeout(() => { logger.info('No request found. waiting for 100ms'); }, 100);
+      }
     }
     count++;
   }
@@ -68,20 +76,21 @@ jsonToWidget = (json) => {
 
 
 processRequest = async (request) => {
-  // console.log("processRequest started")
-
   // get request from bucket 2
   const { Contents } = request;
   const key = Contents[0].Key;
   params = { Bucket: ReadBucketName, Key: key }
   await getObjectFromS3(params);
 
-  //TODO: delete request
-
+  
   // turn request into widget
   const { type } = object;
   const widget = jsonToWidget(object);
   
+  //TODO: delete request
+  const deleteParams = { Bucket: ReadBucketName, Key: `widget/${widget.owner}/${widget.id}`};
+  await deleteRequest(deleteParams);
+
   // handle request
   if (type === 'create') {
     handleCreate(widget);
@@ -93,7 +102,6 @@ processRequest = async (request) => {
 }
 
 getObjectFromS3 = async (params) => {
-  // console.log('getObjectFromS3 started')
   await s3.getObject(params, (err, data) => {
     if (err) {
       logger.error(`There was an error getting key: ${params.Key} from Bucket: ${params.Bucket}`);
@@ -139,6 +147,7 @@ handleCreate = async (widget) => {
       } else {
         logger.info(`Item was uploaded to Table: ${params.TableName}`);
       }
+      processing = false;
     }).promise();
   }
 }
@@ -166,6 +175,7 @@ handleDelete = async (widget) => {
       } else {
         logger.info(`Key:${params.Key} was deleted from Bucket: ${params.Bucket}`);
       }
+      processing = false;
     }).promise();
 
   // if uploading to ddb
@@ -192,6 +202,7 @@ handleDelete = async (widget) => {
       } else {
         logger.info(`Item was deleted from Table: ${params.TableName}`);
       }
+      processing = false;
     }).promise();
   }
 }
@@ -230,6 +241,17 @@ handleUpdate = async (widget) => {
 
   // put updated widget
   handleCreate(updatedWidget);
+}
+
+deleteRequest = async (paramas) => {
+  await s3.deleteObject(params, (err, data) => {
+    if (err) {
+      logger.error(`Key:${params.Key} could not be deleted from Bucket: ${params.Bucket}`);
+      return;
+    } else {
+      logger.info(`Key:${params.Key} was deleted from Bucket: ${params.Bucket}`);
+    }
+  }).promise();
 }
 
 

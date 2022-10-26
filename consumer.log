@@ -1,30 +1,130 @@
-18:04:48 [info] 
+20:01:31 [info] 
 Consumer started
 
-18:04:48 [info] Request was loaded from bucket usu-cs5260-lautom-requests
-18:04:48 [info] Request was loaded from bucket usu-cs5260-lautom-requests
-18:04:48 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
-18:04:48 [info] handleCreate started
-18:04:48 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
-18:04:49 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
-18:04:49 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
-18:32:26 [info] 
+20:02:10 [info] 
 Consumer started
 
-18:32:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
-18:32:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
-18:32:27 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
-18:32:27 [info] handleCreate started
-18:32:27 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
-18:32:27 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
-18:32:27 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
-18:39:05 [info] 
+20:02:24 [info] 
 Consumer started
 
-18:39:05 [info] Request was loaded from bucket usu-cs5260-lautom-requests
-18:39:05 [info] Request was loaded from bucket usu-cs5260-lautom-requests
-18:39:05 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
-18:39:05 [info] handleCreate started
-18:39:05 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
-18:39:06 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
-18:39:06 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+20:03:04 [info] 
+Consumer started
+
+20:03:14 [info] 
+Consumer started
+
+20:03:15 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:03:15 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:03:15 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
+20:03:15 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
+20:03:15 [info] Key:1_create_test was deleted from Bucket: usu-cs5260-lautom-requests
+20:03:15 [info] handleCreate started
+20:03:15 [info] Key:1_create_test was deleted from Bucket: usu-cs5260-lautom-requests
+20:03:16 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+20:03:16 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+20:05:08 [info] 
+Consumer started
+
+20:05:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:05:08 [error] 100
+20:05:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:05:08 [info] key: 2_update_test was retrived from Bucket: usu-cs5260-lautom-requests
+20:05:08 [info] key: 2_update_test was retrived from Bucket: usu-cs5260-lautom-requests
+20:05:09 [info] Key:2_update_test was deleted from Bucket: usu-cs5260-lautom-requests
+20:05:09 [info] handleUpdate started
+20:05:09 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was deleted from Bucket: usu-cs5260-lautom-web
+20:05:09 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+20:05:09 [info] handleCreate started
+20:05:09 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+20:05:09 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+20:05:09 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+20:05:30 [info] 
+Consumer started
+
+20:05:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:05:31 [error] 300
+20:05:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:05:31 [info] key: 3_delete_test was retrived from Bucket: usu-cs5260-lautom-requests
+20:05:31 [error] There was an error getting key: 3_delete_test from Bucket: usu-cs5260-lautom-requests
+20:05:31 [info] Key:3_delete_test was deleted from Bucket: usu-cs5260-lautom-requests
+20:05:31 [info] handleDelete started
+20:05:31 [info] Key:3_delete_test was deleted from Bucket: usu-cs5260-lautom-requests
+20:05:32 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+20:05:32 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was found in Bucket: usu-cs5260-lautom-web
+20:05:32 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+20:05:32 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was deleted from Bucket: usu-cs5260-lautom-web
+20:05:32 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was deleted from Bucket: usu-cs5260-lautom-web
+20:09:02 [info] 
+Consumer started
+
+20:09:02 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:11:02 [info] 
+Consumer started
+
+20:11:03 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:36:29 [info] 
+Consumer started
+
+20:36:29 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:42:26 [info] 
+Consumer started
+
+20:42:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:42:49 [info] 
+Consumer started
+
+20:42:49 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:43:49 [info] 
+Consumer started
+
+20:43:49 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:44:08 [info] 
+Consumer started
+
+20:44:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:44:30 [info] 
+Consumer started
+
+20:44:30 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:44:47 [info] 
+Consumer started
+
+20:44:47 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:45:23 [info] 
+Consumer started
+
+20:45:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:46:38 [info] 
+Consumer started
+
+20:46:39 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:47:24 [info] 
+Consumer started
+
+20:47:25 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:48:10 [info] 
+Consumer started
+
+20:48:10 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:48:10 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:48:11 [info] No request found. waiting for 100ms
+20:49:24 [info] 
+Consumer started
+
+20:49:24 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:51:41 [info] 
+Consumer started
+
+20:51:41 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:52:16 [info] 
+Consumer started
+
+20:52:16 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:52:16 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+20:52:17 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
+20:52:17 [error] There was an error getting key: 1_create_test from Bucket: usu-cs5260-lautom-requests
+20:52:17 [info] Key:1_create_test was deleted from Bucket: usu-cs5260-lautom-requests
+20:52:17 [info] handleCreate started
+20:52:17 [info] Key:1_create_test was deleted from Bucket: usu-cs5260-lautom-requests
+20:52:17 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+20:52:17 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
