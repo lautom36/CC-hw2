@@ -506,3 +506,7 @@ Consumer started
 Consumer started
 
 21:30:11 [info] Bucket: usu-cs5260-lautom-requests was read
+16:40:06 [info] 
+Consumer started
+
+16:40:09 [error] There was an error reading from the usu-cs5260-lautom-requests bucket
