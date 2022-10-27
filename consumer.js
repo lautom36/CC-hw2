@@ -1,22 +1,19 @@
+var argv = require('yargs').argv;
 const AWS = require('aws-sdk');
 AWS.config.update({region: 'us-east-1'});
 const s3 = new AWS.S3();
 const ddb = new AWS.DynamoDB();
-const yargs = require('yargs');
 const logger = require('./logger/index');
-// const Widget = require('Widget.js')
 
 const ReadBucketName = 'usu-cs5260-lautom-requests';
 const WriteBucketName = 'usu-cs5260-lautom-web';
 const WriteDynoDBName = 'widgets';
 
-const argv = yargs.argv;
+// how to run 
+// node consumer.js --type=s3 
+// or
+// node consumer.js --type=ddb
 let actionType = argv.type;
-let count = 0;
-console.log(here);
-
-// TODO: delete this
-actionType = 's3'
 
 // get first key in ReadBucket
 readBucket = async (numberKeys=1) => {
@@ -25,12 +22,12 @@ readBucket = async (numberKeys=1) => {
     MaxKeys: numberKeys
   }
 
-  return await s3.listObjectsV2(params, async function(err, data) {
+  return await s3.listObjectsV2(params, async (err, data) => {
     if (err) {
       logger.error(`There was an error reading from the ${ReadBucketName} bucket`);
     }
     else {
-      logger.info(`Request was loaded from bucket ${ReadBucketName}`)
+      logger.info(`Bucket: ${ReadBucketName} was read`)
       return data;
       // return data;
     }
@@ -57,7 +54,6 @@ poll = async () => {
         setTimeout(() => { logger.info('No request found. waiting for 100ms'); }, 100);
       }
     }
-    count++;
   }
 }
 

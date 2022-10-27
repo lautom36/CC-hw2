@@ -1,0 +1,508 @@
+21:00:56 [info] 
+Consumer started
+
+21:01:05 [error] There was an error reading from the usu-cs5260-lautom-requests bucket
+21:02:23 [info] 
+Consumer started
+
+21:02:31 [error] There was an error reading from the usu-cs5260-lautom-requests bucket
+21:02:47 [info] 
+Consumer started
+
+21:02:48 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:48 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:48 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
+21:02:48 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
+21:02:48 [info] Key:1_create_test was deleted from Bucket: usu-cs5260-lautom-requests
+21:02:48 [info] handleCreate started
+21:02:48 [info] Key:1_create_test was deleted from Bucket: usu-cs5260-lautom-requests
+21:02:49 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+21:02:49 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+21:02:49 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:49 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:49 [info] key: 2_update_test was retrived from Bucket: usu-cs5260-lautom-requests
+21:02:49 [info] key: 2_update_test was retrived from Bucket: usu-cs5260-lautom-requests
+21:02:50 [info] Key:2_update_test was deleted from Bucket: usu-cs5260-lautom-requests
+21:02:50 [info] handleUpdate started
+21:02:50 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was deleted from Bucket: usu-cs5260-lautom-web
+21:02:50 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+21:02:50 [info] handleCreate started
+21:02:50 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+21:02:50 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+21:02:51 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:51 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:51 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+21:02:51 [info] key: 3_delete_test was retrived from Bucket: usu-cs5260-lautom-requests
+21:02:51 [info] key: 3_delete_test was retrived from Bucket: usu-cs5260-lautom-requests
+21:02:51 [info] Key:3_delete_test was deleted from Bucket: usu-cs5260-lautom-requests
+21:02:51 [info] handleDelete started
+21:02:51 [info] Key:3_delete_test was deleted from Bucket: usu-cs5260-lautom-requests
+21:02:51 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+21:02:51 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was found in Bucket: usu-cs5260-lautom-web
+21:02:51 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+21:02:52 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was deleted from Bucket: usu-cs5260-lautom-web
+21:02:52 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was deleted from Bucket: usu-cs5260-lautom-web
+21:02:52 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:52 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:52 [info] No request found. waiting for 100ms
+21:02:52 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:52 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:52 [info] No request found. waiting for 100ms
+21:02:52 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:52 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:53 [info] No request found. waiting for 100ms
+21:02:53 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:53 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:53 [info] No request found. waiting for 100ms
+21:02:53 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:53 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:53 [info] No request found. waiting for 100ms
+21:02:53 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:53 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:53 [info] No request found. waiting for 100ms
+21:02:54 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:54 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:54 [info] No request found. waiting for 100ms
+21:02:54 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:54 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:54 [info] No request found. waiting for 100ms
+21:02:54 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:54 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:54 [info] No request found. waiting for 100ms
+21:02:54 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:54 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:54 [info] No request found. waiting for 100ms
+21:02:55 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:55 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:02:55 [info] No request found. waiting for 100ms
+21:03:41 [info] 
+Consumer started
+
+21:03:42 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:42 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:42 [info] No request found. waiting for 100ms
+21:03:42 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:42 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:42 [info] No request found. waiting for 100ms
+21:03:42 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:42 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:42 [info] No request found. waiting for 100ms
+21:03:42 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:42 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:42 [info] No request found. waiting for 100ms
+21:03:43 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:43 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:43 [info] No request found. waiting for 100ms
+21:03:43 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:43 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:43 [info] No request found. waiting for 100ms
+21:03:43 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:43 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:43 [info] No request found. waiting for 100ms
+21:03:44 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:44 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:44 [info] No request found. waiting for 100ms
+21:03:44 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:44 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:44 [info] No request found. waiting for 100ms
+21:03:44 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:03:44 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:15 [info] 
+Consumer started
+
+21:04:15 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:15 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:15 [info] No request found. waiting for 100ms
+21:04:15 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:15 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:15 [info] No request found. waiting for 100ms
+21:04:15 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:16 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:16 [info] No request found. waiting for 100ms
+21:04:16 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:16 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:16 [info] No request found. waiting for 100ms
+21:04:16 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:16 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:16 [info] No request found. waiting for 100ms
+21:04:16 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:16 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:16 [info] No request found. waiting for 100ms
+21:04:17 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:17 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:17 [info] No request found. waiting for 100ms
+21:04:17 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:17 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:17 [info] No request found. waiting for 100ms
+21:04:17 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:17 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:17 [info] No request found. waiting for 100ms
+21:04:18 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:18 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:18 [info] No request found. waiting for 100ms
+21:04:18 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:18 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:18 [info] No request found. waiting for 100ms
+21:04:18 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:18 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:18 [info] No request found. waiting for 100ms
+21:04:18 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:18 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:18 [info] No request found. waiting for 100ms
+21:04:19 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:19 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:19 [info] No request found. waiting for 100ms
+21:04:19 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:04:19 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:05:17 [info] 
+Consumer started
+
+21:05:17 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:05:35 [info] 
+Consumer started
+
+21:05:35 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:22 [info] 
+Consumer started
+
+21:09:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:23 [info] No request found. waiting for 100ms
+21:09:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:23 [info] No request found. waiting for 100ms
+21:09:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:23 [info] No request found. waiting for 100ms
+21:09:24 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:24 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:24 [info] No request found. waiting for 100ms
+21:09:24 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:24 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:24 [info] No request found. waiting for 100ms
+21:09:24 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:24 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:24 [info] No request found. waiting for 100ms
+21:09:24 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:09:25 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:26 [info] 
+Consumer started
+
+21:10:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:26 [info] No request found. waiting for 100ms
+21:10:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:27 [info] No request found. waiting for 100ms
+21:10:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:27 [info] No request found. waiting for 100ms
+21:10:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:27 [info] No request found. waiting for 100ms
+21:10:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:27 [info] No request found. waiting for 100ms
+21:10:28 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:28 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:28 [info] No request found. waiting for 100ms
+21:10:28 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:28 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:28 [info] No request found. waiting for 100ms
+21:10:28 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:28 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:28 [info] No request found. waiting for 100ms
+21:10:28 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:10:29 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:02 [info] 
+Consumer started
+
+21:11:02 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:02 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:02 [info] No request found. waiting for 100ms
+21:11:03 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:03 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:03 [info] No request found. waiting for 100ms
+21:11:03 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:03 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:03 [info] No request found. waiting for 100ms
+21:11:03 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:03 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:03 [info] No request found. waiting for 100ms
+21:11:13 [info] 
+Consumer started
+
+21:11:13 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:13 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:13 [info] No request found. waiting for 100ms
+21:11:13 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:13 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:13 [info] No request found. waiting for 100ms
+21:11:14 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:14 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:14 [info] No request found. waiting for 100ms
+21:11:14 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:14 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:14 [info] No request found. waiting for 100ms
+21:11:14 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:14 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:11:14 [info] No request found. waiting for 100ms
+21:11:14 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:13:21 [info] 
+Consumer started
+
+21:13:21 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:13:21 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:13:21 [info] No request found. waiting for 100ms
+21:13:21 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:13:21 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:13:21 [info] No request found. waiting for 100ms
+21:13:22 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:13:22 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:13:22 [info] No request found. waiting for 100ms
+21:13:22 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:13:22 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:13:22 [info] No request found. waiting for 100ms
+21:15:24 [info] 
+Consumer started
+
+21:15:25 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:25 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:25 [info] No request found. waiting for 100ms
+21:15:25 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:25 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:25 [info] No request found. waiting for 100ms
+21:15:25 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:25 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:25 [info] No request found. waiting for 100ms
+21:15:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:26 [info] No request found. waiting for 100ms
+21:15:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:26 [info] No request found. waiting for 100ms
+21:15:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:59 [info] 
+Consumer started
+
+21:15:59 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:59 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:15:59 [info] No request found. waiting for 100ms
+21:16:00 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:00 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:00 [info] No request found. waiting for 100ms
+21:16:00 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:00 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:00 [info] No request found. waiting for 100ms
+21:16:00 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:00 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:00 [info] No request found. waiting for 100ms
+21:16:01 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:01 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:01 [info] No request found. waiting for 100ms
+21:16:22 [info] 
+Consumer started
+
+21:16:22 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:22 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:22 [info] No request found. waiting for 100ms
+21:16:22 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:22 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:22 [info] No request found. waiting for 100ms
+21:16:22 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:23 [info] No request found. waiting for 100ms
+21:16:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:23 [info] No request found. waiting for 100ms
+21:16:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:23 [info] No request found. waiting for 100ms
+21:16:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:23 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:16:23 [info] No request found. waiting for 100ms
+21:16:45 [info] 
+Consumer started
+
+21:17:30 [info] 
+Consumer started
+
+21:17:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:31 [info] No request found. waiting for 100ms
+21:17:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:31 [info] No request found. waiting for 100ms
+21:17:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:31 [info] No request found. waiting for 100ms
+21:17:32 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:32 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:32 [info] No request found. waiting for 100ms
+21:17:45 [info] 
+Consumer started
+
+21:17:45 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:45 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:45 [info] No request found. waiting for 100ms
+21:17:46 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:46 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:46 [info] No request found. waiting for 100ms
+21:17:46 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:46 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:46 [info] No request found. waiting for 100ms
+21:17:46 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:46 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:46 [info] No request found. waiting for 100ms
+21:17:47 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:47 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:47 [info] No request found. waiting for 100ms
+21:17:47 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:47 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:47 [info] No request found. waiting for 100ms
+21:17:47 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:17:47 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:32 [info] 
+Consumer started
+
+21:19:32 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:32 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:32 [info] No request found. waiting for 100ms
+21:19:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:33 [info] No request found. waiting for 100ms
+21:19:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:33 [info] No request found. waiting for 100ms
+21:19:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:33 [info] No request found. waiting for 100ms
+21:19:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:34 [info] No request found. waiting for 100ms
+21:19:34 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:34 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:34 [info] No request found. waiting for 100ms
+21:19:55 [info] 
+Consumer started
+
+21:19:55 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:55 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:55 [info] No request found. waiting for 100ms
+21:19:56 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:56 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:56 [info] No request found. waiting for 100ms
+21:19:56 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:56 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:56 [info] No request found. waiting for 100ms
+21:19:56 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:56 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:56 [info] No request found. waiting for 100ms
+21:19:56 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:56 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:19:57 [info] No request found. waiting for 100ms
+21:21:49 [info] 
+Consumer started
+
+21:21:49 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:21:49 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:21:50 [info] No request found. waiting for 100ms
+21:21:50 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:21:50 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:21:50 [info] No request found. waiting for 100ms
+21:21:50 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:21:50 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:21:50 [info] No request found. waiting for 100ms
+21:21:50 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:21:50 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:21:51 [info] No request found. waiting for 100ms
+21:21:51 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:21:51 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:31 [info] 
+Consumer started
+
+21:26:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:31 [info] No request found. waiting for 100ms
+21:26:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:31 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:32 [info] No request found. waiting for 100ms
+21:26:32 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:32 [error] There was an error reading from the usu-cs5260-lautom-requests bucket
+21:26:32 [info] No request found. waiting for 100ms
+21:26:32 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:32 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:32 [info] No request found. waiting for 100ms
+21:26:32 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:32 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:32 [info] No request found. waiting for 100ms
+21:26:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:33 [info] No request found. waiting for 100ms
+21:26:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:33 [info] No request found. waiting for 100ms
+21:26:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:33 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:26:33 [info] No request found. waiting for 100ms
+21:27:07 [info] 
+Consumer started
+
+21:27:07 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:07 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:07 [info] No request found. waiting for 100ms
+21:27:07 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:07 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:07 [info] No request found. waiting for 100ms
+21:27:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:08 [info] No request found. waiting for 100ms
+21:27:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:08 [info] No request found. waiting for 100ms
+21:27:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:08 [info] No request found. waiting for 100ms
+21:27:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:08 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:09 [info] No request found. waiting for 100ms
+21:27:09 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:09 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:09 [info] No request found. waiting for 100ms
+21:27:09 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:09 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:09 [info] No request found. waiting for 100ms
+21:27:09 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:27:09 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+21:29:53 [info] 
+Consumer started
+
+21:29:54 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:54 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:54 [info] No request found. waiting for 100ms
+21:29:54 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:54 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:54 [info] No request found. waiting for 100ms
+21:29:54 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:54 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:54 [info] No request found. waiting for 100ms
+21:29:55 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:55 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:55 [info] No request found. waiting for 100ms
+21:29:55 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:55 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:55 [info] No request found. waiting for 100ms
+21:29:55 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:55 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:55 [info] No request found. waiting for 100ms
+21:29:55 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:55 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:56 [info] No request found. waiting for 100ms
+21:29:56 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:56 [info] Bucket: usu-cs5260-lautom-requests was read
+21:29:56 [info] No request found. waiting for 100ms
+21:30:10 [info] 
+Consumer started
+
+21:30:11 [info] Bucket: usu-cs5260-lautom-requests was read
