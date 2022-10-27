@@ -1,0 +1,50 @@
+19:36:24 [info] 
+Consumer started
+
+19:36:24 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:24 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:25 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
+19:36:25 [info] key: 1_create_test was retrived from Bucket: usu-cs5260-lautom-requests
+19:36:25 [info] Key:1_create_test was deleted from Bucket: usu-cs5260-lautom-requests
+19:36:25 [info] handleCreate started
+19:36:25 [info] Key:1_create_test was deleted from Bucket: usu-cs5260-lautom-requests
+19:36:25 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+19:36:25 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+19:36:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:26 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:26 [info] key: 2_update_test was retrived from Bucket: usu-cs5260-lautom-requests
+19:36:26 [info] key: 2_update_test was retrived from Bucket: usu-cs5260-lautom-requests
+19:36:26 [info] Key:2_update_test was deleted from Bucket: usu-cs5260-lautom-requests
+19:36:26 [info] handleUpdate started
+19:36:26 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was deleted from Bucket: usu-cs5260-lautom-web
+19:36:27 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+19:36:27 [info] handleCreate started
+19:36:27 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+19:36:27 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+19:36:27 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+19:36:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:27 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:27 [info] key: 3_delete_test was retrived from Bucket: usu-cs5260-lautom-requests
+19:36:27 [info] key: 3_delete_test was retrived from Bucket: usu-cs5260-lautom-requests
+19:36:28 [info] Key:3_delete_test was deleted from Bucket: usu-cs5260-lautom-requests
+19:36:28 [info] handleDelete started
+19:36:28 [info] Key:3_delete_test was deleted from Bucket: usu-cs5260-lautom-requests
+19:36:28 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+19:36:28 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was found in Bucket: usu-cs5260-lautom-web
+19:36:28 [info] key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was retrived from Bucket: usu-cs5260-lautom-web
+19:36:28 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was deleted from Bucket: usu-cs5260-lautom-web
+19:36:28 [info] Key:widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was deleted from Bucket: usu-cs5260-lautom-web
+19:36:29 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:29 [error] There was an error reading from the usu-cs5260-lautom-requests bucket
+19:36:29 [info] No request found. waiting for 100ms
+19:36:29 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:29 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:29 [info] No request found. waiting for 100ms
+19:36:29 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:29 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:29 [info] No request found. waiting for 100ms
+19:36:29 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:29 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:29 [info] No request found. waiting for 100ms
+19:36:30 [info] Request was loaded from bucket usu-cs5260-lautom-requests
+19:36:30 [info] Request was loaded from bucket usu-cs5260-lautom-requests

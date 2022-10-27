@@ -13,6 +13,7 @@ const WriteDynoDBName = 'widgets';
 const argv = yargs.argv;
 let actionType = argv.type;
 let count = 0;
+console.log(here);
 
 // TODO: delete this
 actionType = 's3'
@@ -79,9 +80,7 @@ processRequest = async (request) => {
   params = { Bucket: ReadBucketName, Key: key }
   object = await getObjectFromS3(params);
   object = s3toJson(object);
-
-  console.log(object);
-  
+ 
   // turn request into widget
   const { type } = await object;
   const widget = jsonToWidget(object);
@@ -119,7 +118,6 @@ getObjectFromS3 = async (params) => {
 }
 
 getObjectFromDdb = async (params) => {
-  // console.log("getObjectFromDdb started");
   return await ddb.getItem(params, async (err, data) => {
     if (err) {
       logger.error(`There was an error getting the item from Table: ${params.TableName}`);
