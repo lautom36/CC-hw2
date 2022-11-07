@@ -12796,3 +12796,413 @@ Consumer started
 Consumer started
 
 13:27:21 [info] Message was received from queue cs5260-requests
+14:04:04 [info] 
+Consumer started
+
+14:04:04 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:04:25 [info] 
+Consumer started
+
+14:04:26 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:10:07 [info] 
+Consumer started
+
+14:10:07 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:10:21 [info] 
+Consumer started
+
+14:10:21 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:11:00 [info] 
+Consumer started
+
+14:11:00 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:11:23 [info] 
+Consumer started
+
+14:11:23 [error] There was  an error receiving messages from the queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests]
+14:11:33 [info] 
+Consumer started
+
+14:11:33 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:12:35 [info] 
+Consumer started
+
+14:12:36 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:13:51 [info] 
+Consumer started
+
+14:13:52 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:13:52 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:13:52 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:14:39 [info] 
+Consumer started
+
+14:14:40 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:14:40 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:14:40 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:15:46 [info] 
+Consumer started
+
+14:15:47 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:15:47 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:15:47 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:18:03 [info] 
+Consumer started
+
+14:18:04 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:18:04 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:18:04 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:18:34 [info] 
+Consumer started
+
+14:18:35 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:19:23 [info] 
+Consumer started
+
+14:19:24 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:21:53 [info] 
+Consumer started
+
+14:21:53 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:21:53 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:22:29 [info] 
+Consumer started
+
+14:22:29 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:22:29 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:22:52 [info] 
+Consumer started
+
+14:22:52 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:22:52 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:09 [info] 
+Consumer started
+
+14:23:09 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:37 [info] 
+Consumer started
+
+14:23:37 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:37 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:37 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:37 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:39 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:23:39 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:25:03 [info] 
+Consumer started
+
+14:25:03 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:25:03 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:26:25 [info] 
+Consumer started
+
+14:26:26 [error] There was  an error receiving messages from the queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests\
+14:26:39 [info] 
+Consumer started
+
+14:26:39 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:26:39 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:27:41 [info] 
+Consumer started
+
+14:27:41 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:27:41 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:27:42 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:27:42 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:27:42 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:27:42 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:27:42 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:27:42 [error] There was  an error receiving messages from the queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:27:43 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:27:43 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:29:36 [info] 
+Consumer started
+
+14:29:36 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:30:28 [info] 
+Consumer started
+
+14:30:28 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:31:04 [info] 
+Consumer started
+
+14:31:04 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:31:12 [info] 
+Consumer started
+
+14:31:12 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:31:12 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:31:12 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:32:25 [info] 
+Consumer started
+
+14:32:25 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:32:25 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:32:26 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:33:37 [info] 
+Consumer started
+
+14:33:37 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:33:37 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:33:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:46 [info] 
+Consumer started
+
+14:35:47 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:47 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:47 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:47 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:47 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:47 [error] There was  an error receiving messages from the queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:48 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:48 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:48 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:48 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:48 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:48 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:49 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:35:49 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:37:53 [info] 
+Consumer started
+
+14:37:54 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:37:54 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:37:54 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:39:08 [info] 
+Consumer started
+
+14:39:08 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:39:08 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:39:09 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:39:31 [info] 
+Consumer started
+
+14:39:31 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:39:31 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:39:32 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:39:41 [info] 
+Consumer started
+
+14:39:42 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:39:49 [info] 
+Consumer started
+
+14:39:50 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:40:00 [info] 
+Consumer started
+
+14:40:00 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:40:01 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:40:01 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:42:07 [info] 
+Consumer started
+
+14:42:07 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:42:07 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:42:07 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:42:14 [info] 
+Consumer started
+
+14:42:15 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:42:26 [info] 
+Consumer started
+
+14:42:27 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:42:31 [info] 
+Consumer started
+
+14:42:32 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:42:32 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:42:32 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:14 [info] 
+Consumer started
+
+14:43:14 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:14 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:14 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:38 [info] 
+Consumer started
+
+14:43:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:38 [error] There was  an error receiving messages from the queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:38 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:39 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:39 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:39 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:39 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:39 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:39 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:40 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:40 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:40 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:43:40 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:44:35 [info] 
+Consumer started
+
+14:44:35 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:44:35 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:44:48 [info] 
+Consumer started
+
+14:44:48 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:44:48 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:45:20 [info] 
+Consumer started
+
+14:45:20 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:45:20 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:45:27 [info] 
+Consumer started
+
+14:45:27 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:45:27 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:45:57 [info] 
+Consumer started
+
+14:45:58 [error] There was  an error receiving messages from the queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests\
+14:46:02 [info] 
+Consumer started
+
+14:46:02 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:46:02 [error] There was  an error receiving messages from the queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:46:34 [info] 
+Consumer started
+
+14:46:34 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:46:34 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:47:56 [info] 
+Consumer started
+
+14:47:57 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:47:57 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:47:57 [info] No request found. waiting for 100ms
+14:48:09 [info] 
+Consumer started
+
+14:48:10 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:48:10 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:48:10 [info] No request found. waiting for 100ms
+14:48:20 [info] 
+Consumer started
+
+14:48:21 [error] There was  an error receiving messages from the queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests\
+14:49:00 [info] 
+Consumer started
+
+14:49:01 [error] There was  an error receiving messages from the queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests\
+14:49:20 [info] 
+Consumer started
+
+14:49:20 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:49:20 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:49:32 [info] 
+Consumer started
+
+14:49:32 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:49:32 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:50:16 [info] 
+Consumer started
+
+14:50:16 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:50:16 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:50:33 [info] 
+Consumer started
+
+14:50:33 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:50:33 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:50:59 [info] 
+Consumer started
+
+14:50:59 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:50:59 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:51:33 [info] 
+Consumer started
+
+14:51:33 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:51:33 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:51:58 [info] 
+Consumer started
+
+14:51:58 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:51:58 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:52:15 [info] 
+Consumer started
+
+14:52:16 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:52:16 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:53:32 [info] 
+Consumer started
+
+14:53:33 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:54:43 [info] 
+Consumer started
+
+14:54:44 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:55:21 [info] 
+Consumer started
+
+14:55:21 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:55:21 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:55:21 [info] No request found. waiting for 100ms
+14:55:28 [info] 
+Consumer started
+
+14:55:29 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:56:15 [info] 
+Consumer started
+
+14:56:15 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:56:34 [info] 
+Consumer started
+
+14:56:35 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:57:11 [info] 
+Consumer started
+
+14:57:11 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:57:11 [info] handleCreate started
+14:57:11 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:57:11 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+14:57:12 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+14:57:31 [info] 
+Consumer started
+
+14:57:31 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:57:31 [info] handleCreate started
+14:57:31 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:57:32 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+14:57:32 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+14:57:56 [info] 
+Consumer started
+
+14:57:57 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:57:57 [info] handleCreate started
+14:57:57 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+14:57:57 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+14:57:57 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+15:01:07 [info] 
+Consumer started
+
+15:01:08 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+15:01:08 [info] handleCreate started
+15:01:08 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+15:01:08 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+15:01:08 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+15:07:01 [info] 
+Consumer started
+
+15:07:01 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+15:07:01 [info] handleCreate started
+15:07:01 [info] Message was received from queue https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+15:07:02 [info] Message was deleted from queue: https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
+15:07:02 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web
+15:07:02 [info] Key: widget/Mary Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6 was uploaded to Bucket: usu-cs5260-lautom-web

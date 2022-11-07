@@ -46,7 +46,7 @@ const readQueue = async (queueName) => {
        "All"
     ],
     QueueUrl: queueName,
-    VisibilityTimeout: 20,
+    VisibilityTimeout: 0,
     WaitTimeSeconds: 0
    };
 
@@ -56,7 +56,7 @@ const readQueue = async (queueName) => {
     }
     else {
       logger.info(`Message was received from queue ${queueName}`)
-      return data;
+      return await data;
     }
    }).promise();
 }
@@ -67,9 +67,9 @@ const poll = async () => {
   logger.info("\nConsumer started\n");
 
   let request = null;
-
+  let count = 0;
   // lock the poller
-  while (true) {
+  while (count < 1) {
     if (!processing){
 
       // see if we are reading from a queue or a bucket
@@ -84,7 +84,11 @@ const poll = async () => {
       else {
         result = await readQueue(queueName);
         request = result;
-        console.log(request);
+        if (request.Messages === undefined) {
+          request = null;
+        } else {
+
+        }
       }
 
       
@@ -96,6 +100,7 @@ const poll = async () => {
         setTimeout(() => { logger.info('No request found. waiting for 100ms'); }, 100);
       }
     }
+    count += 1;
   }
 }
 
@@ -112,19 +117,33 @@ jsonToWidget = (json) => {
 
 processRequest = async (request) => {
   let object = null;
+
   // get request from bucket 2
-  const { Contents } = request;
-  const key = Contents[0].Key;
-  params = { Bucket: ReadBucketName, Key: key }
-  object = await getObjectFromS3(params);
-  object = s3toJson(object);
+  if (queueName === undefined) {
+    // console.log('starting s3')
+    const { Contents } = request;
+    const key = Contents[0].Key;
+    params = { Bucket: ReadBucketName, Key: key }
+    object = await getObjectFromS3(params);
+    object = s3toJson(object);
+    
+    const deleteParams = { Bucket: ReadBucketName, Key: `widget/${widget.owner}/${widget.id}`};
+    await deleteRequest(deleteParams);
+
+  } else {
+    // console.log('starting sqs')
+    object = request.Messages[0].Body;
+    object = JSON.parse(object);
+    // console.log(request)
+
+    const deleteParams = { QueueUrl: queueName, ReceiptHandle: request.Messages[0].ReceiptHandle};
+    await deleteRequest(deleteParams);
+  }
  
   // turn request into widget
-  const { type } = await object;
+  const { type } = object;
   const widget = jsonToWidget(object);
   
-  const deleteParams = { Bucket: ReadBucketName, Key: `widget/${widget.owner}/${widget.id}`};
-  await deleteRequest(deleteParams);
 
   // handle request
   if (type === 'create') {
@@ -140,8 +159,8 @@ processRequest = async (request) => {
 
 s3toJson = (data) => {
   let preJson = data.Body.toString();
-      let json = JSON.parse(preJson);
-      return json;
+  let json = JSON.parse(preJson);
+  return json;
 }
 
 getObjectFromS3 = async (params) => {
@@ -290,15 +309,25 @@ handleUpdate = async (widget) => {
   await handleCreate(updatedWidget);
 }
 
-deleteRequest = async (paramas) => {
-  await s3.deleteObject(params, async (err, data) => {
-    if (err) {
-      logger.error(`Key:${params.Key} could not be deleted from Bucket: ${params.Bucket}`);
-      return;
-    } else {
-      logger.info(`Key:${params.Key} was deleted from Bucket: ${params.Bucket}`);
-    }
-  }).promise();
+deleteRequest = async (params) => {
+  if (queueName === undefined) {
+    await s3.deleteObject(params, async (err, data) => {
+      if (err) {
+        logger.error(`Key:${params.Key} could not be deleted from Bucket: ${params.Bucket}`);
+        return;
+      } else {
+        logger.info(`Key:${params.Key} was deleted from Bucket: ${params.Bucket}`);
+      }
+    }).promise();
+  } else {
+    await sqs.deleteMessage(params, async (err, data) => {
+      if (err) {
+        logger.error(`Message could not be deleted from queue: ${params.QueueUrl}`)
+      } else {
+        logger.info(`Message was deleted from queue: ${params.QueueUrl}`)
+      }
+    })
+  }
 }
 
 
