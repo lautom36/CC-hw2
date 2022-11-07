@@ -3,6 +3,7 @@ const AWS = require('aws-sdk');
 AWS.config.update({region: 'us-east-1'});
 const s3 = new AWS.S3();
 const ddb = new AWS.DynamoDB();
+const sqs = new AWS.SQS({apiVersion: '2012-11-05'});
 const logger = require('./logger/index');
 
 const ReadBucketName = 'usu-cs5260-lautom-requests';
@@ -13,10 +14,12 @@ const WriteDynoDBName = 'widgets';
 // node consumer.js --type=s3 
 // or
 // node consumer.js --type=ddb
+// node consumer.js --type=s3 --queue=https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests
 let actionType = argv.type;
+let queueName = argv.queue;
 
 // get first key in ReadBucket
-readBucket = async (numberKeys=1) => {
+const readBucket = async (numberKeys=1) => {
   const params = {
     Bucket: ReadBucketName,
     MaxKeys: numberKeys
@@ -29,24 +32,63 @@ readBucket = async (numberKeys=1) => {
     else {
       logger.info(`Bucket: ${ReadBucketName} was read`)
       return data;
-      // return data;
     }
   }).promise();
 }
 
+const readQueue = async (queueName) => {
+  const params = {
+    AttributeNames: [
+       "SentTimestamp"
+    ],
+    MaxNumberOfMessages: 1,
+    MessageAttributeNames: [
+       "All"
+    ],
+    QueueUrl: queueName,
+    VisibilityTimeout: 20,
+    WaitTimeSeconds: 0
+   };
+
+   return await sqs.receiveMessage(params, async (err, data) => {
+    if (err) {
+      logger.error(`There was  an error receiving messages from the queue ${queueName}`)
+    }
+    else {
+      logger.info(`Message was received from queue ${queueName}`)
+      return data;
+    }
+   }).promise();
+}
+
 // untill interupted look for requests
 let processing = false;
-poll = async () => {
+const poll = async () => {
   logger.info("\nConsumer started\n");
+
+  let request = null;
+
+  // lock the poller
   while (true) {
     if (!processing){
-      // processing = true;
-      result = await readBucket();
-      let request = result;
-      if (request.KeyCount === 0) {
-        request = null;
+
+      // see if we are reading from a queue or a bucket
+      if (queueName === undefined){
+        result = await readBucket();
+        request = result;
+        // verify there is a request
+        if (request.KeyCount === 0) {
+          request = null;
+        }
       }
+      else {
+        result = await readQueue(queueName);
+        request = result;
+        console.log(request);
+      }
+
       
+      // process request
       if (request !== null) {
         await processRequest(request)
       }
