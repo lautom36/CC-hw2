@@ -1,0 +1,12 @@
+1.  Why is possible that Update and Delete Widget Requests may fail, even when you were 
+    running just one Consumer? 
+
+    Since its not a FIFO queue there is a chance for requests to get out of order so there 
+    may be a update request for a widget that has not been created yet.
+
+2.  How would this possible behavior impact the design of distributed applications that use 
+    queues? 
+
+    It may be that you need to requeue requests so that they can happen "in order".
+    Also if you have really important requests for stuff like transactions you most likely
+    want to stay away from queues so that things dont have a chance to happen out of order.
