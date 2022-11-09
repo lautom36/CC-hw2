@@ -175,20 +175,23 @@ getObjectFromS3 = async (params) => {
       }
     }).promise();
   } catch(err){
-    console.log('we hit ----------------------------------------------------')
-    return await null;
+    return null;
   }
 }
 
 getObjectFromDdb = async (params) => {
-  return await ddb.getItem(params, async (err, data) => {
-    if (err) {
-      logger.error(`There was an error getting the item from Table: ${params.TableName}`);
-    } else {
-      logger.info(`item was retrived from Table: ${params.TableName}`);
-      return data;
-    }
-  }).promise();
+  try {
+    return await ddb.getItem(params, async (err, data) => {
+      if (err) {
+        logger.error(`There was an error getting the item from Table: ${params.TableName}`);
+      } else {
+        logger.info(`item was retrived from Table: ${params.TableName}`);
+        return await data;
+      }
+    }).promise();
+  } catch(err) {
+    return null;
+  }
 }
 
 handleCreate = async (widget) => {
@@ -263,17 +266,17 @@ handleDelete = async (widget) => {
       return;
     } else {
       logger.info(`Item was found in Table: ${params.TableName}`);
+      // delete item
+      await ddb.deleteItem(params, async (err, data) => {
+        if (err) {
+          logger.error(`Item could not be delted from Table: ${params.TableName}`);
+        } else {
+          logger.info(`Item was deleted from Table: ${params.TableName}`);
+        }
+        processing = false;
+      }).promise();
     }
 
-    // delete item
-    await ddb.deleteItem(params, async (err, data) => {
-      if (err) {
-        logger.error(`Item could not be delted from Table: ${params.TableName}`);
-      } else {
-        logger.info(`Item was deleted from Table: ${params.TableName}`);
-      }
-      processing = false;
-    }).promise();
   }
 }
 
@@ -284,12 +287,7 @@ handleUpdate = async (widget) => {
   if (actionType === 's3') {
     params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` };
     object = await getObjectFromS3(params);
-    if (object === null) { 
-      console.log('there was an error')
-    } else {
-      object = s3toJson(object);
-      
-    }
+    object = s3toJson(object);
   
   } else if (actionType === 'ddb') {
     const params = { 
