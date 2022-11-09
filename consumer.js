@@ -69,7 +69,7 @@ const poll = async () => {
   let request = null;
   let count = 0;
   // lock the poller
-  while (count < 1) {
+  while (true) {
     if (!processing){
 
       // see if we are reading from a queue or a bucket
@@ -158,20 +158,26 @@ processRequest = async (request) => {
 }
 
 s3toJson = (data) => {
+  if (data === null) { return null; }
   let preJson = data.Body.toString();
   let json = JSON.parse(preJson);
   return json;
 }
 
 getObjectFromS3 = async (params) => {
-  return await s3.getObject(params, async (err, data) => {
-    if (err) {
-      logger.error(`There was an error getting key: ${params.Key} from Bucket: ${params.Bucket}`);
-    } else {
-      logger.info(`key: ${params.Key} was retrived from Bucket: ${params.Bucket}`);
-      return await data;
-    }
-  }).promise();
+  try {
+    return await s3.getObject(params, async (err, data) => {
+      if (err) {
+        logger.error(`There was an error getting key: ${params.Key} from Bucket: ${params.Bucket}`);
+      } else {
+        logger.info(`key: ${params.Key} was retrived from Bucket: ${params.Bucket}`);
+        return await data;
+      }
+    }).promise();
+  } catch(err){
+    console.log('we hit ----------------------------------------------------')
+    return await null;
+  }
 }
 
 getObjectFromDdb = async (params) => {
@@ -278,7 +284,12 @@ handleUpdate = async (widget) => {
   if (actionType === 's3') {
     params = { Bucket: WriteBucketName, Key: `widget/${widget.owner}/${widget.id}` };
     object = await getObjectFromS3(params);
-    object = s3toJson(object);
+    if (object === null) { 
+      console.log('there was an error')
+    } else {
+      object = s3toJson(object);
+      
+    }
   
   } else if (actionType === 'ddb') {
     const params = { 
@@ -289,24 +300,26 @@ handleUpdate = async (widget) => {
       object = await getObjectFromDdb(params);
     }
     
-    const ogWidget = {
-      id: object.widgetId,
-      owner: object.owner,
-      label: object.label,
-      description: object.description,
-      otherAttributes: object.otherAttributes,
-    };
-
-  // update widget
-  let updatedWidget = ogWidget;
-  for (key in widget) {
-    if (widget[key] !== undefined) {
-      updatedWidget[key] = widget[key];
+    if (object !== null) {
+      const ogWidget = {
+        id: object.widgetId,
+        owner: object.owner,
+        label: object.label,
+        description: object.description,
+        otherAttributes: object.otherAttributes,
+      };
+  
+    // update widget
+    let updatedWidget = ogWidget;
+    for (key in widget) {
+      if (widget[key] !== undefined) {
+        updatedWidget[key] = widget[key];
+      }
     }
+    // put updated widget
+    await handleCreate(updatedWidget);
   }
 
-  // put updated widget
-  await handleCreate(updatedWidget);
 }
 
 deleteRequest = async (params) => {
