@@ -4,13 +4,13 @@ const sqs = new AWS.SQS({apiVersion: '2012-11-05'});
 
 exports.handler = async (event) => {
   console.log('starting lambda');
-  // console.log(event);
+  console.log(event);
   const requestJson = getRequest(event);
   const isValid = validate(requestJson);
   console.log('isValid: ', isValid)
   if (isValid) {
     const test = await sendToSqs(requestJson);
-    // console.log('test: ', test);
+    console.log('test: ', test);
   }
   return response(isValid);
 }
@@ -52,13 +52,15 @@ const validate = (request) => {
 }
 
 const sendToSqs = async (request) => {
+  console.log('starting');
+  console.log(request);
   const ReadQueueName = 'https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests'
   const sendParams = {
     DelaySeconds: 10,
     MessageBody: JSON.stringify(request),
     QueueUrl: ReadQueueName //SQS_QUEUE_URL; e.g., 'https://sqs.REGION.amazonaws.com/ACCOUNT-ID/QUEUE-NAME'
   };
-  return data = await sqs.sendMessage(sendParams, (err, data) => {
+  return result = await sqs.sendMessage(sendParams, (err, data) => {
     if (err) {
       console.log('Error');
       return 'err';
@@ -90,3 +92,15 @@ const response = (isValid) => {
   }
   return response;
 }
+
+const testRequest = {
+    "type": "create",
+    "requestId": "e80fab52-71a5-4a76-8c4d-11b66b83ca2a",
+    "widgetId": "8123f304-f23f-440b-a6d3-80e979fa4cd6",
+    "owner": "James",
+    "label": "JWJYY",
+    "description": "THBRNVNQPYAWNHGRGUKIOWCKXIVNDLWOIQTADHVEVMUAJWDONEPUEAXDITDSHJTDLCMHHSESFXSDZJCBLGIKKPUYAWKQAQI"
+}
+
+// const test = sendToSqs(testRequest);
+// console.log(test);
