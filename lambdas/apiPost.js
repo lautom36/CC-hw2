@@ -9,7 +9,8 @@ exports.handler = async (event) => {
   const isValid = validate(requestJson);
   console.log('isValid: ', isValid)
   if (isValid) {
-    sendToSqs(requestJson);
+    const test = await sendToSqs(requestJson);
+    // console.log('test: ', test);
   }
   return response(isValid);
 }
@@ -48,9 +49,11 @@ const sendToSqs = async (request) => {
   };
   return data = await sqs.sendMessage(sendParams, (err, data) => {
     if (err) {
-      console.log('Error', err);
+      console.log('Error');
+      return 'err';
     } else {
-      console.log("Successfully added message", data.MessageId);
+      console.log("Successfully added message");
+      return 'data';
     }
   });
 }
