@@ -4,7 +4,7 @@ const sqs = new AWS.SQS({apiVersion: '2012-11-05'});
 
 exports.handler = async (event) => {
   console.log('starting lambda');
-  console.log(event);
+  // console.log(event);
   const requestJson = getRequest(event);
   const isValid = validate(requestJson);
   console.log('isValid: ', isValid)
@@ -43,7 +43,7 @@ const sendToSqs = async (request) => {
   const ReadQueueName = 'https://sqs.us-east-1.amazonaws.com/153933164283/cs5260-requests'
   const sendParams = {
     DelaySeconds: 10,
-    MessageBody: request,
+    MessageBody: JSON.stringify(request),
     QueueUrl: ReadQueueName //SQS_QUEUE_URL; e.g., 'https://sqs.REGION.amazonaws.com/ACCOUNT-ID/QUEUE-NAME'
   };
   return data = await sqs.sendMessage(sendParams, (err, data) => {
@@ -60,17 +60,17 @@ const response = (isValid) => {
   if (isValid) {
     response = {
       statusCode: 200,
-      headers: {
-        "x-custom-header" : "my custom header value"
-      },
+      // headers: {
+      //   "x-custom-header" : "my custom header value"
+      // },
       body: JSON.stringify({message: "success"})
     };
   } else {
     response = {
       statusCode: 201,
-      headers: {
-        "x-custom-header" : "my custom header value"
-      },
+      // headers: {
+      //   "x-custom-header" : "my custom header value"
+      // },
       body: JSON.stringify({message: "failure"})
     };
   }
