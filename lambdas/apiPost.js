@@ -32,10 +32,21 @@ const validate = (request) => {
     return false;
   }else {
     if (!request.type) { valid = false; console.log('no type'); }
-    if (!request.requestId) { valid = false; console.log('no requestId'); }
-    if (!request.widgetId) { valid = false; console.log('no widgetId'); }
-    if (!request.owner) { valid = false; console.log('no owner'); }
-    if (!request.label) { valid = false; console.log('no label'); }
+    else if (request.type === 'create') {
+      if (!request.requestId) { valid = false; console.log('no requestId'); }
+      if (!request.widgetId) { valid = false; console.log('no widgetId'); }
+      if (!request.owner) { valid = false; console.log('no owner'); }
+      if (!request.label) { valid = false; console.log('no label'); }
+    }
+    else if (request.type === 'update') {
+      if (!request.requestId) { valid = false; console.log('no requestId'); }
+      if (!request.widgetId) { valid = false; console.log('no widgetId'); }
+    }
+    else if (request.type === 'delete') {
+      if (!request.requestId) { valid = false; console.log('no requestId'); }
+      if (!request.widgetId) { valid = false; console.log('no widgetId'); }
+      if (!request.owner) { valid = false; console.log('no owner'); }
+    }
     return valid;
   }
 }
