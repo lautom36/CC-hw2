@@ -1,0 +1,75 @@
+// test to check for body -> expect a failure (missing body)
+{
+  "key1": "value1",
+  "key2": "value2",
+  "key3": "value3"
+}
+
+// test to check for incorrect body -> expect failure (missing type)
+{
+  "body": {
+  }
+}
+
+// test to check for incorrect create request -> expect failure (missing owner)
+{
+  "body": {
+    "type": "create",
+    "requestId": "e80fab52-71a5-4a76-8c4d-11b66b83ca2a",
+    "widgetId": "8123f304-f23f-440b-a6d3-80e979fa4cd6",
+    "label": "JWJYY",
+    "description": "THBRNVNQPYAWNHGRGUKIOWCKXIVNDLWOIQTADHVEVMUAJWDONEPUEAXDITDSHJTDLCMHHSESFXSDZJCBLGIKKPUYAWKQAQI"
+  }
+}
+
+// test to check for correct create request -> expect success
+{
+  "body": {
+    "type": "create",
+    "requestId": "e80fab52-71a5-4a76-8c4d-11b66b83ca2a",
+    "widgetId": "8123f304-f23f-440b-a6d3-80e979fa4cd6",
+    "owner": "Mary Matthews",
+    "label": "JWJYY",
+    "description": "THBRNVNQPYAWNHGRGUKIOWCKXIVNDLWOIQTADHVEVMUAJWDONEPUEAXDITDSHJTDLCMHHSESFXSDZJCBLGIKKPUYAWKQAQI"
+  }
+}
+
+// test to check for incorrect update request -> expect failure (missing requestId)
+{
+  "body": {
+    "type": "update",
+    "widgetId": "8123f304-f23f-440b-a6d3-80e979fa4cd6",
+    "owner": "Mary Matthews",
+    "description": "hey"
+  }
+}
+
+// test to check for correct update request -> expect success
+{
+  "body": {
+    "type": "update",
+    "requestId": "e80fab52-71a5-4a76-8c4d-11b66b83ca2a",
+    "widgetId": "8123f304-f23f-440b-a6d3-80e979fa4cd6",
+    "owner": "Mary Matthews",
+    "description": "hey"
+  }
+}
+
+// test to check for incorrect delete request -> expect failure (missing owner)
+{
+  "body": {
+    "type": "delete",
+    "requestId": "e80fab52-71a5-4a76-8c4d-11b66b83ca2a",
+    "widgetId": "8123f304-f23f-440b-a6d3-80e979fa4cd6"
+  }
+}
+
+// test to check for correct delete request -> expect success
+{
+  "body": {
+    "type": "delete",
+    "requestId": "e80fab52-71a5-4a76-8c4d-11b66b83ca2a",
+    "widgetId": "8123f304-f23f-440b-a6d3-80e979fa4cd6",
+    "owner": "Mary Matthews"
+  }
+}

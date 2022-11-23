@@ -41,4 +41,8 @@ const sqsUpload = async (sendParams) => {
     });
 };
 
-poller();
+// poller();
+
+const testAPIGateway = () => {
+  
+}
