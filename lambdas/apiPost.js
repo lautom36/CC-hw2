@@ -1,14 +1,13 @@
-// get widget request from body of the post method
-// validate the request
-// send request to sqs queue
-
 const AWS = require('aws-sdk');
 AWS.config.update({region: 'us-east-1'});
 const sqs = new AWS.SQS({apiVersion: '2012-11-05'});
 
 exports.handler = async (event) => {
+  console.log('starting lambda');
+  console.log(event);
   const requestJson = getRequest(event);
   const isValid = validate(requestJson);
+  console.log('isValid: ', isValid)
   if (isValid) {
     sendToSqs(requestJson);
   }
@@ -17,17 +16,26 @@ exports.handler = async (event) => {
 
 const getRequest = (event) => {
   if (event.body) {
-    return JSON.parse(event.body);
+    // console.log(event.body)
+    // const preJson = event.body.toString();
+    // console.log(preJson);
+    // const json = JSON.parse(preJson);
+    return event.body;
   }
   return null;
 }
 
 const validate = (request) => {
+  let valid = true;
   if (request === null) {
     return false;
   }else {
-    //TODO: needs some more work but is ok for now
-    return true;
+    if (!request.type) { valid = false; console.log('no type'); }
+    if (!request.requestId) { valid = false; console.log('no requestId'); }
+    if (!request.widgtId) { valid = false; console.log('no widgetId'); }
+    if (!request.owner) { valid = false; console.log('no owner'); }
+    if (!request.label) { valid = false; console.log('no label'); }
+    return valid;
   }
 }
 
@@ -59,7 +67,7 @@ const response = (isValid) => {
     };
   } else {
     response = {
-      statusCode: 200,
+      statusCode: 201,
       headers: {
         "x-custom-header" : "my custom header value"
       },
