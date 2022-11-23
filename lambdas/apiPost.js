@@ -32,7 +32,7 @@ const validate = (request) => {
   }else {
     if (!request.type) { valid = false; console.log('no type'); }
     if (!request.requestId) { valid = false; console.log('no requestId'); }
-    if (!request.widgtId) { valid = false; console.log('no widgetId'); }
+    if (!request.widgetId) { valid = false; console.log('no widgetId'); }
     if (!request.owner) { valid = false; console.log('no owner'); }
     if (!request.label) { valid = false; console.log('no label'); }
     return valid;
