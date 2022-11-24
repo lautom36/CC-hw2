@@ -10,7 +10,6 @@ exports.handler = async (event) => {
   console.log('isValid: ', isValid)
   if (isValid) {
     const test = await sendToSqs(requestJson);
-    console.log('test: ', test);
   }
   return response(isValid);
 }
